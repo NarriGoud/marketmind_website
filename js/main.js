@@ -95,7 +95,6 @@
         '.mcp-code',
         '.dev-content',
         '.dev-api-preview',
-        '.contact-card',
         '.hero-badge',
         '.hero-title',
         '.hero-subtitle',
@@ -147,101 +146,39 @@
         card.style.transitionDelay = (i * 0.15) + 's';
     });
 
-    /* ── Contact Panel (Dynamic Injection) ── */
-    var contactPanelLoaded = false;
+    /* ── Contact Form (if present) ───────── */
+    var contactForm = document.getElementById('contactForm');
+    var contactSuccess = document.getElementById('contactSuccess');
+    var contactReset = document.getElementById('contactReset');
+    var contactTextarea = document.getElementById('contact-message');
+    var contactCharCount = document.getElementById('charCount');
 
-    function openContactPanel() {
-        if (!contactPanelLoaded) {
-            fetch('contact_modal.html')
-                .then(function (res) { return res.text(); })
-                .then(function (html) {
-                    var wrapper = document.createElement('div');
-                    wrapper.innerHTML = html;
-                    document.body.appendChild(wrapper.firstElementChild);
-                    contactPanelLoaded = true;
-                    bindContactPanel();
-                    showContactPanel();
-                });
-        } else {
-            showContactPanel();
-        }
-    }
-
-    function showContactPanel() {
-        var panel = document.getElementById('contactPanel');
-        if (panel) {
-            panel.classList.add('open');
-            document.body.style.overflow = 'hidden';
-        }
-    }
-
-    function closeContactPanel() {
-        var panel = document.getElementById('contactPanel');
-        if (panel) {
-            panel.classList.remove('open');
-            document.body.style.overflow = '';
-        }
-    }
-
-    function bindContactPanel() {
-        var backdrop = document.getElementById('contactBackdrop');
-        var closeBtn = document.getElementById('contactClose');
-        var form     = document.getElementById('contactForm');
-        var success  = document.getElementById('contactSuccess');
-        var resetBtn = document.getElementById('contactReset');
-        var textarea = document.getElementById('contact-message');
-        var charCount = document.getElementById('charCount');
-
-        if (backdrop) backdrop.addEventListener('click', closeContactPanel);
-        if (closeBtn) closeBtn.addEventListener('click', closeContactPanel);
-
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape') closeContactPanel();
-        });
-
-        if (textarea && charCount) {
-            textarea.addEventListener('input', function () {
-                var len = textarea.value.length;
-                charCount.textContent = len;
-                if (len > 1000) {
-                    textarea.value = textarea.value.slice(0, 1000);
-                    charCount.textContent = 1000;
-                }
-            });
-        }
-
-        if (form) {
-            form.addEventListener('submit', function (e) {
-                e.preventDefault();
-                form.style.display = 'none';
-                success.classList.add('visible');
-            });
-        }
-
-        if (resetBtn) {
-            resetBtn.addEventListener('click', function () {
-                form.reset();
-                if (charCount) charCount.textContent = '0';
-                form.style.display = '';
-                success.classList.remove('visible');
-            });
-        }
-
-        document.querySelectorAll('#contactPanel [data-link]').forEach(function (btn) {
-            btn.addEventListener('click', function () {
-                var key = btn.getAttribute('data-link');
-                var url = cfg[key];
-                if (url) window.location.href = url;
-            });
+    if (contactTextarea && contactCharCount) {
+        contactTextarea.addEventListener('input', function () {
+            var len = contactTextarea.value.length;
+            contactCharCount.textContent = len;
+            if (len > 1000) {
+                contactTextarea.value = contactTextarea.value.slice(0, 1000);
+                contactCharCount.textContent = 1000;
+            }
         });
     }
 
-    /* ── Contact Triggers ────────────────── */
-    document.querySelectorAll('[data-contact]').forEach(function (el) {
-        el.addEventListener('click', function (e) {
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
-            openContactPanel();
+            contactForm.style.display = 'none';
+            contactSuccess.classList.add('visible');
         });
-    });
+    }
+
+    if (contactReset) {
+        contactReset.addEventListener('click', function () {
+            contactForm.reset();
+            if (contactCharCount) contactCharCount.textContent = '0';
+            contactForm.style.display = '';
+            contactSuccess.classList.remove('visible');
+        });
+    }
 
 })();
