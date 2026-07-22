@@ -181,4 +181,45 @@
         });
     }
 
+    /* ── Contact Panel ────────────────────── */
+    var contactPanelOverlay = document.getElementById('contactPanelOverlay');
+    var contactPanelClose = document.getElementById('contactPanelClose');
+
+    function openContactPanel() {
+        if (!contactPanelOverlay) return;
+        contactPanelOverlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeContactPanel() {
+        if (!contactPanelOverlay) return;
+        contactPanelOverlay.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+
+    if (contactPanelClose) {
+        contactPanelClose.addEventListener('click', closeContactPanel);
+    }
+
+    if (contactPanelOverlay) {
+        contactPanelOverlay.addEventListener('click', function (e) {
+            if (e.target === contactPanelOverlay) {
+                closeContactPanel();
+            }
+        });
+    }
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && contactPanelOverlay && contactPanelOverlay.classList.contains('open')) {
+            closeContactPanel();
+        }
+    });
+
+    document.querySelectorAll('[data-contact]').forEach(function (el) {
+        el.addEventListener('click', function (e) {
+            e.preventDefault();
+            openContactPanel();
+        });
+    });
+
 })();
