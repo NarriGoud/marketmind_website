@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>MarketMind - AI-Powered Financial Intelligence</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;550;600;650;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="assets/dark_logo.svg" alt="MarketMind" class="logo-img">
+                <span class="logo-text">MarketMind</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#channels">Integrations</a></li>
+                <li><a href="#use-cases">Use Cases</a></li>
+                <li><a href="#" class="nav-contact-btn" data-contact>Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="nav-overlay" id="navOverlay"></div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-grid"></div>
+            <div class="hero-glow"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-badge">Now available for Indian & US Markets</div>
+            <h1 class="hero-title">
+                AI-Powered<br>
+                <span class="hero-highlight">Financial Intelligence</span>
+            </h1>
+            <p class="hero-subtitle">
+                Real-time market data, intelligent ticker extraction, RAG-powered analysis, 
+                and price prediction — one API key, two integration channels: REST API and MCP.
+            </p>
+            <div class="hero-buttons">
+                <a data-link="developers" class="btn btn-primary">
+                    Get Started
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a data-link="docs" class="btn btn-secondary">
+                    Read the Docs
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-value">500+</span>
+                    <span class="stat-label">NSE/BSE Tickers</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">&lt;200ms</span>
+                    <span class="stat-label">Response Time</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">99.9%</span>
+                    <span class="stat-label">Uptime</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features" id="features">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Core Capabilities</span>
+                <h2 class="section-title">Everything you need to build<br><span class="text-accent">intelligent financial apps</span></h2>
+                <p class="section-desc">From real-time data extraction to predictive analytics, MarketMind provides a complete toolkit for financial developers.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+                    </div>
+                    <h3>RAG Intelligence</h3>
+                    <p>Retrieval-Augmented Generation powered by financial context. Query any stock or market topic and get grounded, source-backed answers.</p>
+                    <div class="feature-tag">Context-aware</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h16M4 12h16M4 17h10"/><circle cx="20" cy="17" r="2"/></svg>
+                    </div>
+                    <h3>Ticker Extraction</h3>
+                    <p>Extract NSE/BSE and global stock tickers from unstructured text. Enriched with sector, industry, and peer group metadata.</p>
+                    <div class="feature-tag">Multi-market</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                    </div>
+                    <h3>Price Prediction</h3>
+                    <p>ML-driven price movement predictions with confidence scores. Backtested on historical market data with configurable time horizons.</p>
+                    <div class="feature-tag">ML-powered</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <h3>Real-Time Data</h3>
+                    <p>Live market status, expiry calculations, settlement dates, and trading holiday awareness. Always in sync with the market calendar.</p>
+                    <div class="feature-tag">Live sync</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3>Secure API Keys</h3>
+                    <p>Encrypted API key management with per-key rate limiting, usage tracking, and plan-based quotas. Your keys, your control.</p>
+                    <div class="feature-tag">Enterprise-grade</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6M23 11h-6"/></svg>
+                    </div>
+                    <h3>Multi-Channel Access</h3>
+                    <p>One API key, two integration paths. Use the REST API for apps and dashboards, or connect via MCP for AI agents and LLM workflows.</p>
+                    <div class="feature-tag">REST API + MCP</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ONE KEY, EVERY PLATFORM -->
+    <section class="unified" id="unified">
+        <div class="section-container">
+            <div class="unified-layout">
+                <div class="unified-content">
+                    <span class="section-tag">One Identity</span>
+                    <h2 class="section-title">One key unlocks<br><span class="text-accent">everything</span></h2>
+                    <p class="section-desc">
+                        Generate a single API key and use it across both integration channels. 
+                        No separate accounts, no separate credentials — just one identity that works everywhere.
+                    </p>
+                    <ul class="unified-points">
+                        <li>
+                            <span class="unified-check">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            </span>
+                            <span>Same key for REST API and MCP</span>
+                        </li>
+                        <li>
+                            <span class="unified-check">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            </span>
+                            <span>Unified usage tracking across both channels</span>
+                        </li>
+                        <li>
+                            <span class="unified-check">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            </span>
+                            <span>One dashboard to manage everything</span>
+                        </li>
+                        <li>
+                            <span class="unified-check">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            </span>
+                            <span>Per-key rate limits and plan-based quotas</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="unified-visual">
+                    <div class="unified-key-card">
+                        <div class="unified-key-header">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+                            <span class="unified-key-label">Your API Key</span>
+                        </div>
+                        <div class="unified-key-value">mm_live_a1b2c3d4e5f6g7h8...</div>
+                        <div class="unified-key-channels">
+                            <div class="unified-channel">
+                                <div class="unified-channel-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                                </div>
+                                <span>REST API</span>
+                            </div>
+                            <div class="unified-channel-plus">+</div>
+                            <div class="unified-channel">
+                                <div class="unified-channel-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                                </div>
+                                <span>MCP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTEGRATION CHANNELS -->
+    <section class="channels" id="channels">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Two Ways to Integrate</span>
+                <h2 class="section-title">Choose how you want to<br><span class="text-accent">build with MarketMind</span></h2>
+                <p class="section-desc">Whether you're building apps or AI agents, we have the right integration for you.</p>
+            </div>
+            <div class="unified-banner">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+                <span>Same API key works for both channels — generate once, use everywhere</span>
+            </div>
+            <div class="channels-grid">
+
+                <!-- MCP Channel -->
+                <div class="channel-card channel-card-highlight">
+                    <div class="channel-badge channel-badge-new">MCP</div>
+                    <h3>Model Context Protocol</h3>
+                    <p>Connect MarketMind to any AI agent. Drop it into Claude, ChatGPT, Cursor, or any MCP-compatible client — your AI instantly understands markets.</p>
+                    <ul class="channel-features">
+                        <li>
+                            <span class="channel-check">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            </span>
+                            <span>Works with Claude, ChatGPT, Cursor, and more</span>
+                        </li>
+                        <li>
+                            <span class="channel-check">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            </span>
+                            <span>Natural language financial queries</span>
+                        </li>
+                        <li>
+                            <span class="channel-check">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            </span>
+                            <span>Automatic ticker extraction & RAG</span>
+                        </li>
+                        <li>
+                            <span class="channel-check">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            </span>
+                            <span>One config file to connect</span>
+                        </li>
+                    </ul>
+                    <div class="channel-code">
+                        <div class="code-window">
+                            <div class="code-header">
+                                <div class="code-dots"><span></span><span></span><span></span></div>
+                                <span class="code-filename">mcp_config.json</span>
+                            </div>
+                            <pre class="code-block"><code>{
+  <span class="code-key">"mcpServers"</span>: {
+    <span class="code-key">"marketmind"</span>: {
+      <span class="code-key">"url"</span>: <span class="code-string">"https://mcp.marketmind-hub.in/mcp"</span>,
+      <span class="code-key">"transport"</span>: <span class="code-string">"streamable-http"</span>,
+      <span class="code-key">"headers"</span>: {
+        <span class="code-key">"X-API-Key"</span>: <span class="code-string">"your-api-key"</span>
+      }
+    }
+  }
+}</code></pre>
+                        </div>
+                    </div>
+                    <div class="channel-actions">
+                        <a data-link="mcp" class="btn btn-primary">
+                            Get API Key
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                        <a data-link="mcp_docs" class="btn btn-secondary">
+                            MCP Docs
+                        </a>
+                    </div>
+                </div>
+
+                <!-- API Channel -->
+                <div class="channel-card">
+                    <div class="channel-badge">REST API</div>
+                    <h3>Developers API</h3>
+                    <p>Integrate MarketMind into any application with our clean REST API. Perfect for trading bots, dashboards, fintech apps, and backends.</p>
+                    <ul class="channel-features">
+                        <li>
+                            <span class="channel-check">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            </span>
+                            <span>RESTful endpoints with JSON responses</span>
+                        </li>
+                        <li>
+                            <span class="channel-check">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            </span>
+                            <span>Works with any language or framework</span>
+                        </li>
+                        <li>
+                            <span class="channel-check">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            </span>
+                            <span>API key authentication with rate limiting</span>
+                        </li>
+                        <li>
+                            <span class="channel-check">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            </span>
+                            <span>Full documentation and code examples</span>
+                        </li>
+                    </ul>
+                    <div class="channel-code">
+                        <div class="code-window">
+                            <div class="code-header">
+                                <div class="code-dots"><span></span><span></span><span></span></div>
+                                <span class="code-filename">terminal</span>
+                            </div>
+                            <pre class="code-block"><code><span class="code-string">$ curl -X POST https://api.marketmind-hub.in/v1/signals/ticker-extract \
+  -H "X-API-Key: YOUR_KEY" \
+  -d '{"text": "Reliance and TCS surged today"}'</span>
+
+<span class="code-output">{
+  "tickers": [
+    {"symbol": "RELIANCE", "sector": "Energy"},
+    {"symbol": "TCS", "sector": "IT"}
+  ]
+}</span></code></pre>
+                        </div>
+                    </div>
+                    <div class="channel-actions">
+                        <a data-link="developers" class="btn btn-primary">
+                            Get API Key
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                        <a data-link="docs" class="btn btn-secondary">
+                            API Docs
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- USE CASES -->
+    <section class="use-cases" id="use-cases">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Use Cases</span>
+                <h2 class="section-title">Built for <span class="text-accent">real-world</span> financial workflows</h2>
+                <p class="section-desc">From solo traders to fintech platforms, MarketMind powers diverse financial applications.</p>
+            </div>
+            <div class="use-cases-grid">
+                <div class="use-case-card">
+                    <div class="use-case-number">01</div>
+                    <h3>Trading Bots & Algo Systems</h3>
+                    <p>Feed real-time market data and price predictions into your trading algorithms. Use RAG for news-driven sentiment analysis before executing trades.</p>
+                    <div class="use-case-tags">
+                        <span>REST API / MCP</span>
+                        <span>Price Prediction</span>
+                    </div>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-number">02</div>
+                    <h3>Research Dashboards</h3>
+                    <p>Build intelligent financial dashboards that pull context-aware insights. Ask natural language questions about any stock and get structured answers.</p>
+                    <div class="use-case-tags">
+                        <span>REST API / MCP</span>
+                        <span>RAG Intelligence</span>
+                    </div>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-number">03</div>
+                    <h3>AI-Powered Financial Advisors</h3>
+                    <p>Create AI agents that understand markets. Connect via MCP to give your LLM real-time financial context, expiry dates, and sector analysis.</p>
+                    <div class="use-case-tags">
+                        <span>MCP</span>
+                        <span>RAG Intelligence</span>
+                    </div>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-number">04</div>
+                    <h3>Portfolio Analytics</h3>
+                    <p>Track sector exposure, peer comparisons, and market-wide signals. Use ticker metadata and sector classification for intelligent portfolio breakdowns.</p>
+                    <div class="use-case-tags">
+                        <span>REST API / MCP</span>
+                        <span>Sector Data</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <div class="contact-card">
+                <div class="contact-content">
+                    <span class="section-tag">Get in Touch</span>
+                    <h2 class="section-title">Ready to integrate<br><span class="text-accent">MarketMind?</span></h2>
+                    <p class="section-desc">
+                        One account, one key, two channels. Start building with the REST API or connect via MCP — your choice.
+                    </p>
+                </div>
+                <div class="contact-actions">
+                    <a href="#" class="btn btn-primary" data-contact>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        Contact Us
+                    </a>
+                    <a data-link="developers_pricing" class="btn btn-secondary">
+                        View Pricing
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="section-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo">
+                        <img src="assets/dark_logo.svg" alt="MarketMind" class="logo-img">
+                        <span class="logo-text">MarketMind</span>
+                    </a>
+                    <p>AI-powered financial intelligence for the Indian stock market.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>MCP</h4>
+                    <ul>
+                        <li><a data-link="mcp">MCP Website</a></li>
+                        <li><a data-link="mcp_docs">MCP Docs</a></li>
+                        <li><a data-link="mcp_dashboard">MCP Dashboard</a></li>
+                        <li><a data-link="mcp_pricing">MCP Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Developers API</h4>
+                    <ul>
+                        <li><a data-link="developers">Developers Website</a></li>
+                        <li><a data-link="developers_docs">API Docs</a></li>
+                        <li><a data-link="developers_dashboard">Developers Dashboard</a></li>
+                        <li><a data-link="developers_pricing">Developers Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#" data-contact>Contact</a></li>
+                        <li><a data-link="privacy">Privacy Policy</a></li>
+                        <li><a data-link="terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MarketMind. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
