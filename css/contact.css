@@ -84,6 +84,14 @@
     overflow-y: auto;
     padding: 2rem 1.75rem;
     display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* ── Main Row ── */
+
+.contact-main {
+    display: flex;
     gap: 2.5rem;
     align-items: flex-start;
 }
@@ -171,7 +179,10 @@
     gap: 1rem;
     padding: 1.5rem 1.75rem;
     border-top: 1px solid var(--border);
-    flex-shrink: 0;
+    background: var(--bg-primary);
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
 }
 
 .contact-nav-title {
@@ -345,7 +356,7 @@
         transform: translateY(0);
     }
 
-    .contact-panel-body {
+    .contact-main {
         flex-direction: column;
         gap: 2rem;
     }
@@ -370,6 +381,11 @@
 
     .contact-form-card {
         max-width: 100%;
+    }
+
+    .contact-nav-links {
+        position: static;
+        border-top: none;
     }
 }
 
